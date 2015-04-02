@@ -1,0 +1,128 @@
+html
+{
+    height:100%;
+    font-family: 'Lato', sans-serif;
+    margin: 1em;
+}
+body {
+   margin:0;
+   padding:0;
+   height:100%;;
+   font-family: 'Lato', sans-serif;
+}
+.title
+{
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	%width:20em;
+}
+.minititle
+{
+	font-style: italic;
+	font-weight: bold;
+	font-size: 120%;
+	text-decoration: underline;
+}
+ul.team
+{
+	margin: 0;
+	padding: 0;
+	display:inline-table;
+	position:relative;
+}
+ul.team li
+{
+	%display:none;
+	display:inline-block;
+	margin-right: 50px;
+	text-decoration: underline;
+}
+ul.team li ul.sub
+{
+	margin:0;
+	padding:0;
+	display:none;
+	position:absolute;
+	margin-top:10px;
+}
+ul.sub li
+{
+	%display:none;
+	%font-size:200%;
+	text-decoration: none;
+	display:block;
+	margin-right: 20px;
+	font-style:italic;
+}
+ul.team li:hover ul.sub
+{
+	display: block;
+}
+.top
+{
+	margin-left:auto;
+	margin-right:auto;
+}
+.right
+{
+	margin:auto;
+	align:left;
+}
+.steer
+{
+	width:300px;
+	margin:auto;
+}
+.top
+{
+	margin-left: 100px;
+	margin-right 75px;
+	margin-bottom: 30px;
+}
+.rightleft
+{
+	
+}
+.left
+{
+	margin-left:0;
+	margin-right:0;
+}
+.right
+{
+	margin-right:0;
+	margin-left: 150px;
+}
+.down
+{
+	margin-top: 30px;
+	margin-left: 100px;
+	margin-right 75px;
+}
+.connect
+{
+	font-size:125%;
+	font-weight:bold;
+}
+.inputfield
+{
+	font-weight:bold;
+}
+.center
+{
+	width: 300px;
+	margin: auto;
+}
+.bold
+{
+	font-weight:bold;
+}
+
+
+
+
+
+
+
+
