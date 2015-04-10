@@ -112,7 +112,7 @@ ul.team li:hover ul.sub
 	font-size:125%;
 	font-weight:bold;
 	text-align:center;
-	margin-bottom: 60px;
+	margin-bottom: 50px;
 	margin-right: 75px;
 }
 .inputfield
@@ -126,6 +126,7 @@ ul.team li:hover ul.sub
 .anslut
 {
 	align-content: center;
+	margin-top:50px;
 }
 .connect
 {
