@@ -86,10 +86,6 @@ ul.team li:hover ul.sub
 	margin-right 75px;
 	margin-bottom: 30px;
 }
-.rightleft
-{
-	
-}
 .left
 {
 	margin-left:0;
