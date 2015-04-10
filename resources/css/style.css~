@@ -72,7 +72,13 @@ ul.team li:hover ul.sub
 .steer
 {
 	width:300px;
-	margin:auto;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top: 50px;
+}
+.grupp
+{
+	height: 50px;
 }
 .top
 {
@@ -98,21 +104,41 @@ ul.team li:hover ul.sub
 {
 	margin-top: 30px;
 	margin-left: 100px;
-	margin-right 75px;
+	margin-right 70px;
 }
 .connect
 {
 	font-size:125%;
 	font-weight:bold;
 }
+.smalltitle
+{
+	font-size:125%;
+	font-weight:bold;
+	text-align:center;
+	margin-bottom: 60px;
+	margin-right: 75px;
+}
 .inputfield
 {
 	font-weight:bold;
 }
-.center
+.inputlabel
 {
-	width: 300px;
-	margin: auto;
+	text-align: center;
+}
+.anslut
+{
+	align-content: center;
+}
+.connect
+{
+	text-align:center;
+	margin-right: 75px;
+}
+.button
+{
+	margin-left: 45px;
 }
 .bold
 {

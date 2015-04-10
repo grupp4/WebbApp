@@ -20,7 +20,7 @@ and open the template in the editor.
     <p class="minititle">PRODUKT</p>
     <p>Webb-applikation för att styra en LEGO robot (EV3) med hjälp av en Rasberry Pi</p>
     <p class = "minititle"> PROJEKTGRUPP</p>
-    <div>
+    <div class ="grupp">
     <ul class="team">
 	<li>Kim<ul class="sub"><li>Web master</li></ul> </li>
 	<li>Albin <ul class="sub"><li>Hardware master</li></ul></li>
@@ -29,6 +29,7 @@ and open the template in the editor.
     </ul>
     </div>
     <div class="steer">
+    <p class="smalltitle">Styrknappar</p>
     <div class="top">
     <input type="image" src="resources/images/up.jpg" alt="Submit" width="48" height="48">
     </div>
@@ -43,13 +44,13 @@ and open the template in the editor.
     <div class="down">
     <input type="image" src="resources/images/down.jpg" alt="Submit" width="48" height="48">
     </div>
-	</div>
-	<div class= "center">
-	<p class = "connect">Connect robot</p>
+    <div class= "anslut">
+	<p class = "connect">Anslut en robot</p>
 		<form action="#">
 	<p class="inputlabel">Adress <input type="text" name="FirstName" value="localhost"> </p>
-	<input class="bold" type="submit" value="Connect">
+	<p class="button"><input class="bold" type="submit" value="Anslut"></p>
 </form>
+	</div>
 	</div>
     </body>
 </html>
