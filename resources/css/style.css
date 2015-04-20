@@ -123,6 +123,11 @@ ul.team li:hover ul.sub
 {
 	text-align: center;
 }
+.faillabel
+{
+	text-align: center;
+	color: red;
+}
 .anslut
 {
 	align-content: center;
