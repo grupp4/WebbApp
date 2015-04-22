@@ -42,24 +42,24 @@ else
     <div class="steer">
     <p class="smalltitle">Styrknappar</p>
     <div class="top">
-    <form action="forward.php" method="POST">
+    <form action="" method = "POST">
     <input type="image" src="resources/images/up.jpg" alt="Submit" width="48" height="48">
     </form>
     </div>
     <div class="rightleft">
     <span class="left">
-    <form action="left.php" method="POST">
+    <form action="" method = "POST" style="display:inline;">
     <input type="image" src="resources/images/left.jpg" alt="Submit" width="48" height="48">
     </form>
     </span>
     <span class="right">
-    <form action="right.php" method="POST">
+    <form action="" method = "POST" style="display:inline;">
     <input type="image" src="resources/images/right.jpg" alt="Submit" width="48" height="48">
     </form>
     <span>
     </div>
     <div class="down">
-    <form action="down.php" method="POST">
+    <form action="" method = "POST">
     <input type="image" src="resources/images/down.jpg" alt="Submit" width="48" height="48">
     </form>
     </div>
