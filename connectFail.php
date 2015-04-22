@@ -4,6 +4,17 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
+<?php
+$cookie_name = "ip";
+if(!isset($_COOKIE[$cookie_name])) 
+{
+	
+}
+else 
+{
+	header("Refresh: 0;url=connectSuccess.php");
+}
+?>
 <html>
     <head>
         <title>Projektgrupp 4</title>
@@ -50,7 +61,6 @@ and open the template in the editor.
 	<p class="inputlabel">IP-Adress: <input type="text" name="ip"> </p>
 	<p class="faillabel">Anslutningen misslyckades, försök igen</p>
 	<p class="button"> <button>Anslut</button></p>
-	<!-- <input class="bold" type="submit" value="Anslut"> -->
 </form>
 	</div>
 	</div>

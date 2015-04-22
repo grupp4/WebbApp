@@ -10,11 +10,14 @@ if(isset($_POST)){
 
     // if all error checks pass, then echo out - thanks for taking part in our survey!
 }
-if(!($con = ssh2_connect("130.237.238.216", 22))){
+if(!($con = ssh2_connect("$ip", 22))){
     echo "fail: unable to establish connection\n";
-      header("Refresh: 0;url=connectFail.html");
+      header("Refresh: 0;url=connectFail.php");
    	break; 
 } else {
+	$cookie_name = "ip";
+	$cookie_value = $ip;
+	setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1 day
     // try to authenticate with username root, password secretpassword
     if(!ssh2_auth_password($con, "pi", "742")) {
         echo "fail: unable to authenticate\n";
@@ -40,7 +43,7 @@ if(!($con = ssh2_connect("130.237.238.216", 22))){
             echo "Command result: ";
             echo $data;
         }
-        header("Refresh: 0;url=connectFail.html");
+        header("Refresh: 0;url=connectSuccess.php");
    	  break; 
     }
 }

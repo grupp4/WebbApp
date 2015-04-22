@@ -4,6 +4,17 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
+<?php
+$cookie_name = "ip";
+if(!isset($_COOKIE[$cookie_name])) 
+{
+	header("Refresh: 0;url=connectFail.php");
+}
+else 
+{
+	
+}
+?>
 <html>
     <head>
         <title>Projektgrupp 4</title>
@@ -37,22 +48,27 @@ and open the template in the editor.
     </div>
     <div class="rightleft">
     <span class="left">
+    <form action="left.php" method="POST">
     <input type="image" src="resources/images/left.jpg" alt="Submit" width="48" height="48">
+    </form>
     </span>
     <span class="right">
+    <form action="right.php" method="POST">
     <input type="image" src="resources/images/right.jpg" alt="Submit" width="48" height="48">
+    </form>
     <span>
     </div>
     <div class="down">
+    <form action="down.php" method="POST">
     <input type="image" src="resources/images/down.jpg" alt="Submit" width="48" height="48">
+    </form>
     </div>
     <div class= "anslut">
-	<!-- <p class = "connect">Anslutningen lyckades</p> -->
 	<form action="connect.php" method="POST">
 	<p class="successlabel">Anslutningen lyckades, använd styrknapparna för att styra roboten</p>
+	<form action="disconnect.php" method="POST">
 	<p class="button"> <button>Koppla ifrån</button></p>
-	<!-- <input class="bold" type="submit" value="Anslut"> -->
-</form>
+	</form>
 	</div>
 	</div>
     </body>
