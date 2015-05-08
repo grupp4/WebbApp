@@ -6,13 +6,9 @@ and open the template in the editor.
 -->
 <?php
 $cookie_name = "ip";
-if(!isset($_COOKIE[$cookie_name])) 
+if(isset($_COOKIE[$cookie_name])) 
 {
-	
-}
-else 
-{
-	header("Refresh: 0;url=connectSuccess.php");
+	header("Refresh: 0;url=connectSuccess.php");	
 }
 ?>
 <html>
@@ -57,11 +53,13 @@ else
     </div>
     <div class= "anslut">
 	<p class = "connect">Anslut en robot</p>
-		<form action="connect.php" method="POST">
-	<p class="inputlabel">IP-Adress: <input type="text" name="ip"> </p>
+	<form action="connect.php" method="POST">
+	<p class="inputlabel">IP-adress: <input type="text" name="ip"> </p>
+	<p class="inputlabel">Namn:<input type="text" name="user" class="t"> </p>
+	<p class="inputlabel">Lösenord: <input type="password" name="pw"> </p>
 	<p class="faillabel">Anslutningen misslyckades, försök igen</p>
 	<p class="button"> <button>Anslut</button></p>
-</form>
+	</form>
 	</div>
 	</div>
     </body>

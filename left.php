@@ -1,49 +1,59 @@
 <?php
-$cookie_name = "ip";
-if(!isset($_COOKIE[$cookie_name])) 
+$cookie_ip = "ip";
+$cookie_user = "user";
+$cookie_pw = "pw";
+if(!isset($_COOKIE[$cookie_ip]) || !isset($_COOKIE[$cookie_user]) || !isset($_COOKIE[$cookie_pw])) 
 {
-	echo "Cookie named " . $cookie_name . "' is not set!";
-} 
+	header("Refresh: 0;url=connectFail.php");
+}
 else 
 {
-	echo "Ip cookie exists <br>";
-	if(!($con = ssh2_connect($_COOKIE[$cookie_name], 22)))
+	if(!($con = ssh2_connect($_COOKIE[$cookie_ip], 22)))
 	{
 		echo "fail: unable to establish connection\n";
 		header("Refresh: 0;url=connectFail.php");
-   	break; 
+   		break; 
 	} 
 	else 
 	{
     	// try to authenticate with username root, password secretpassword
-    	if(!ssh2_auth_password($con, "pi", "742")) 
+    	if(!ssh2_auth_password($con, $_COOKIE[$cookie_user], $_COOKIE[$cookie_pw])) 
     	{
-      	echo "fail: unable to authenticate\n";
-		 	echo $data; 
- 	   } 
+			echo "fail: unable to establish connection\n";
+			setcookie($cookie_ip, "", time() -(1000), "/");
+			unset($_COOKIE[$cookie_ip]);
+			setcookie($cookie_user, "", time() -(1000), "/");
+			unset($_COOKIE[$cookie_user]);
+			setcookie($cookie_pw, "", time() -(1000), "/");
+			unset($_COOKIE[$cookie_pw]);
+			header("Refresh: 0;url=connectFail.php");
+ 		} 
     	else 
     	{
-	    	if (!($stream = ssh2_exec($con, "cd /home/pi; python mindstorm2.py;"))) 
+	    	if (!($stream = ssh2_exec($con, "python left.py"))) 
 	    	{
-         	echo "fail: unable to execute command\n";
-      	} 
-      	else 
-	      {
-	     		echo "<br>";
-        		echo "command success";
-            // collect returning data from command
-            stream_set_blocking($stream, true);
-            $data = "";
-            while ($buf = fread($stream,4096)) 
-            {
-                $data .= $buf;
-            }
-            //fclose($stream);
-            //echo "<br>";
-            //echo "Command result: ";
-            //echo $data;
+				setcookie($cookie_ip, "", time() -(1000), "/");
+				unset($_COOKIE[$cookie_ip]);
+				setcookie($cookie_user, "", time() -(1000), "/");
+				unset($_COOKIE[$cookie_user]);
+				setcookie($cookie_pw, "", time() -(1000), "/");
+				unset($_COOKIE[$cookie_pw]);
+				header("Refresh: 0;url=connectFail.php");
+      		} 
+      		else 
+			{
+				// collect returning data from command
+				//	stream_set_blocking($stream, true);
+				//	$data = "";
+				//	while ($buf = fread($stream,4096)) 
+				//	{
+				//		$data .= $buf;
+				//	}
+				header("Refresh: 0;url=index.php");
+				fclose($stream);
         	}
 		}
 	}
 }   
+//	if (!($stream = ssh2_exec($con, "export DISPLAY=:0; emacs /home/pi/mindstorm2.py;"))) 
 ?>

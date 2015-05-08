@@ -4,11 +4,12 @@ html
     font-family: 'Lato', sans-serif;
     margin: 1em;
 }
-body {
-   margin:0;
-   padding:0;
-   height:100%;;
-   font-family: 'Lato', sans-serif;
+body 
+{
+	margin:0;
+	padding:0;
+	height:100%;;
+	font-family: 'Lato', sans-serif;
 }
 .title
 {
@@ -138,7 +139,7 @@ ul.team li:hover ul.sub
 	text-align:center;
 	margin-right: 75px;
 }
-.button
+.button, .pil
 {
 	margin-left: 45px;
 }
@@ -146,8 +147,37 @@ ul.team li:hover ul.sub
 {
 	font-weight:bold;
 }
+.t
+{
+	margin-left: 30px;
+}
 
-
+#stream
+{
+	margin-right: auto;
+	margin-left: auto;
+	text-align: center;
+	font-weight: bold;
+	cursor: pointer;
+}
+#player
+{
+	display: none;
+	margin-right: auto;
+	margin-left: auto;
+	align: middle;
+	width: 500; 
+	height: 500;
+}
+.click
+{
+	font-size:105%;
+	font-weight:bold;
+	text-align:center;
+	margin-bottom: 50px;
+	margin-right: 75px;
+	cursor: pointer;
+}
 
 
 

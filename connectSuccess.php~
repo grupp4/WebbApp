@@ -5,14 +5,12 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
 <?php
-$cookie_name = "ip";
-if(!isset($_COOKIE[$cookie_name])) 
+$cookie_ip = "ip";
+$cookie_user = "user";
+$cookie_pw = "pw";
+if(!isset($_COOKIE[$cookie_ip]) || !isset($_COOKIE[$cookie_user]) || !isset($_COOKIE[$cookie_pw])) 
 {
 	header("Refresh: 0;url=connectFail.php");
-}
-else 
-{
-	
 }
 ?>
 <html>
@@ -42,29 +40,28 @@ else
     <div class="steer">
     <p class="smalltitle">Styrknappar</p>
     <div class="top">
-    <form action="" method = "POST">
+    <form action="forward.php" method = "POST">
     <input type="image" src="resources/images/up.jpg" alt="Submit" width="48" height="48">
     </form>
     </div>
     <div class="rightleft">
     <span class="left">
-    <form action="" method = "POST" style="display:inline;">
+    <form action="left.php" method = "POST" style="display:inline;">
     <input type="image" src="resources/images/left.jpg" alt="Submit" width="48" height="48">
     </form>
     </span>
     <span class="right">
-    <form action="" method = "POST" style="display:inline;">
+    <form action="right.php" method = "POST" style="display:inline;">
     <input type="image" src="resources/images/right.jpg" alt="Submit" width="48" height="48">
     </form>
     <span>
     </div>
     <div class="down">
-    <form action="" method = "POST">
+    <form action="down.php" method = "POST">
     <input type="image" src="resources/images/down.jpg" alt="Submit" width="48" height="48">
     </form>
     </div>
     <div class= "anslut">
-	<form action="connect.php" method="POST">
 	<p class="successlabel">Anslutningen lyckades, använd styrknapparna för att styra roboten</p>
 	<form action="disconnect.php" method="POST">
 	<p class="button"> <button>Koppla ifrån</button></p>
