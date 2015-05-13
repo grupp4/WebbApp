@@ -77,6 +77,15 @@ ul.team li:hover ul.sub
 	margin-right:auto;
 	margin-top: 50px;
 }
+.steer2
+{
+	display:inline;
+	float:right;
+	width:300px;
+	margin-left:0;
+	margin-right:10%;
+	margin-top: 80px;
+}
 .grupp
 {
 	height: 50px;
@@ -192,6 +201,15 @@ ul.team li:hover ul.sub
 .inline
 {
 	display:inline;
+}
+#stream2
+{
+	display:inline;
+	width: 500px;
+	height: 500px; 
+	margin-left: 10%;
+	margin-right: 0;
+	float: left;
 }
 
 

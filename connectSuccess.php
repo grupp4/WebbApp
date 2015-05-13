@@ -40,13 +40,15 @@ if(!isset($_COOKIE[$cookie_ip]) || !isset($_COOKIE[$cookie_user]) || !isset($_CO
 				<li>Fredrik <ul class="sub"><li>Test master</li></ul></li> 
 			</ul>
 		</div>
+		<div id="stream2">
+			<span class="stream1"> <p class = "click">SHOW STREAM</p>
 		<div id="stream">
 			<iframe id="player" type="text/html"
 				src="http://www.twitch.tv/grupp4kth/embed"
 				frameborder="0"></iframe>
 		</div>
-		<div class="steer">
-			<p class = "click">SHOW STREAM</p>
+		</div>
+		<div class="steer2">
 			<p class="smalltitle">Styrknappar</p>
 			<div class="top">
 				<!-- -<form action="forward.php" method = "POST"> -->
