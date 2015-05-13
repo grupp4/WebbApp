@@ -4,13 +4,13 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
-<?php
+<?php 
 $cookie_ip = "ip";
 $cookie_user = "user";
 $cookie_pw = "pw";
 if(!isset($_COOKIE[$cookie_ip]) || !isset($_COOKIE[$cookie_user]) || !isset($_COOKIE[$cookie_pw])) 
 {
-	//header("Refresh: 0;url=connectFail.php");
+	header("Refresh: 0;url=connectFail.php");
 }
 ?>
 <html id ="cont">
@@ -49,20 +49,26 @@ if(!isset($_COOKIE[$cookie_ip]) || !isset($_COOKIE[$cookie_user]) || !isset($_CO
 			<p class = "click">SHOW STREAM</p>
 			<p class="smalltitle">Styrknappar</p>
 			<div class="top">
-				<!-- -<form action="forward.php" method = "POST"> -->
-				<p>
-					<img class ="post" src="resources/images/up.jpg" width="48" height="48"></p>
-					<!-- 				</form>  -->
+				<form action="forward.php" method = "POST">
+					<input type="image" src="resources/images/up.jpg" alt="Submit" width="48" height="48">
+				</form>
 			</div>
 			<div class="rightleft">
 				<span class="left">
-				<!-- -	<p class="inline">  -->
-						<img class ="left1" src="resources/images/left.jpg" width="48" height="48"> 	<img class ="right1" src="resources/images/right.jpg" width="48" height="48"> 
+					<form action="left.php" method = "POST" style="display:inline;">
+						<input type="image" src="resources/images/left.jpg" alt="Submit" width="48" height="48">
+					</form>
 				</span>
+				<span class="right">
+					<form action="right.php" method = "POST" style="display:inline;">
+						<input type="image" src="resources/images/right.jpg" alt="Submit" width="48" height="48">
+					</form>
+					<span>
 			</div>
 			<div class="down">
-				<p>
-					<img class ="down1" src="resources/images/down.jpg" width="48" height="48"> </p>
+				<form action="down.php" method = "POST">
+					<input type="image" src="resources/images/down.jpg" alt="Submit" width="48" height="48">
+				</form>
 			</div>
 			<div class= "anslut">
 				<p class="successlabel">Anslutningen lyckades. <br> Använd styrknapparna eller piltangenterna för att styra roboten.</p>

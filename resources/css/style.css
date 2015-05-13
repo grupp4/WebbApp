@@ -97,6 +97,16 @@ ul.team li:hover ul.sub
 	margin-right:0;
 	margin-left: 150px;
 }
+.left1
+{
+	margin-left:0;
+	margin-right:0;
+}
+.right1
+{
+	margin-right:0;
+	margin-left: 150px;
+}
 .down
 {
 	margin-top: 30px;
@@ -179,7 +189,10 @@ ul.team li:hover ul.sub
 	cursor: pointer;
 }
 
-
+.inline
+{
+	display:inline;
+}
 
 
 

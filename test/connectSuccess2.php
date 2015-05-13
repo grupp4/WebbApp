@@ -42,7 +42,7 @@ if(!isset($_COOKIE[$cookie_ip]) || !isset($_COOKIE[$cookie_user]) || !isset($_CO
 		</div>
 		<div id="stream">
 			<iframe id="player" type="text/html"
-				src="http://www.twitch.tv/grupp4kth/embed"
+				src="http://www.twitch.tv/allbiin/embed"
 				frameborder="0"></iframe>
 		</div>
 		<div class="steer">
@@ -50,19 +50,25 @@ if(!isset($_COOKIE[$cookie_ip]) || !isset($_COOKIE[$cookie_user]) || !isset($_CO
 			<p class="smalltitle">Styrknappar</p>
 			<div class="top">
 				<!-- -<form action="forward.php" method = "POST"> -->
-				<p>
-					<img class ="post" src="resources/images/up.jpg" width="48" height="48"></p>
+					<img class ="post" src="resources/images/up.jpg" width="48" height="48">
 					<!-- 				</form>  -->
 			</div>
 			<div class="rightleft">
 				<span class="left">
-				<!-- -	<p class="inline">  -->
-						<img class ="left1" src="resources/images/left.jpg" width="48" height="48"> 	<img class ="right1" src="resources/images/right.jpg" width="48" height="48"> 
+					<form action="left.php" method = "POST" style="display:inline;">
+						<input type="image" src="resources/images/left.jpg" alt="Submit" width="48" height="48">
+					</form>
 				</span>
+				<span class="right">
+					<form action="right.php" method = "POST" style="display:inline;">
+						<input type="image" src="resources/images/right.jpg" alt="Submit" width="48" height="48">
+					</form>
+					<span>
 			</div>
 			<div class="down">
-				<p>
-					<img class ="down1" src="resources/images/down.jpg" width="48" height="48"> </p>
+				<form action="down.php" method = "POST">
+					<input type="image" src="resources/images/down.jpg" alt="Submit" width="48" height="48">
+				</form>
 			</div>
 			<div class= "anslut">
 				<p class="successlabel">Anslutningen lyckades. <br> Använd styrknapparna eller piltangenterna för att styra roboten.</p>
